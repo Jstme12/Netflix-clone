@@ -1,0 +1,32 @@
+.row{
+    margin-left: 20px;
+    color: white;
+}
+
+
+.row_posters{
+    display:flex;
+    overflow-y: hidden;/*hide the vertical axis*/
+    overflow-x: scroll;
+    padding: 20px;/*to allow poster to have hover effect with scroll*/
+}
+
+.row_posters::-webkit-scrollbar{
+    display: none;/*to remove scrollbar*/
+}
+.row_poster{
+    object-fit:contain;
+    width:100%;
+    max-height: 100px;
+    margin-right:10px;        /*bcoz posters are touching each other*/
+    transition:transform 450ms;          /*changes size igt does in a slow way*/
+}
+.row_poster:hover{
+    transform:scale(1.08); /*for lifting poster up when hovered*/
+    }
+.row_posterLarge{
+    max-height:250px;
+}
+.row_posterLarge:hover{
+    transform:scale(1.09); /*for lifting poster up when hovered*/
+    }
